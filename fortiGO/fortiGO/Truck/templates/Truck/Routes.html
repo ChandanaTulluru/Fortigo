@@ -1,0 +1,78 @@
+{% load static %}
+<!doctype html>
+<html>
+    <meta charset ="utf-8">
+    <meta name ="viewport" content="width=device-width, intial-scale=1">
+    <title>fortiGO-The Truck App</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+	  <link rel="stylesheet" typed="text/css" href="{% static 'Truck/base.css' %}">
+	  <link rel="stylesheet" typed="text/css" href="{% static 'Truck/base1.css' %}">
+     <!--<style><% include ./styles.css %>-->
+
+    </style>
+
+    </head>
+    <body>
+        <header style="background:skyblue">
+            <h2 href="#">fortiGO</h2>
+            <nav>
+                <li><a href="#">LogOut</a> </li>
+		<li><a href="#">FAQ</a> </li>
+                <li><a href="#">Contact</a> </li>
+            </nav>
+            </header>
+	
+           <section class="hero">
+            <div class="background-image" style="background-color:skyblue"></div>
+                <!--<div class="hero-content-area">
+		<h3>Please fill out the following details!!</h3>
+                
+		
+
+		<div class="form-style-5">
+		
+			{% for post in PostS %}
+			<article class="media content-section">
+			  <div class="media-body">
+			    <div class="article-metadata">
+			      <a class="mr-2" href="#">{{ post.Fullname }}</a>
+			      <small class="text-muted">{{ post.Email }}</small>
+			    </div>
+			    <h2><a class="article-title" href="#">{{ post.Source }}</a></h2>
+			    <p class="article-content">{{ post.Destination }}</p>
+			  </div>
+			</article>
+			{% endfor %}
+
+		</div>-->
+
+                </div>
+
+            </section>
+
+        <!-- <section class="contact">
+		<h3 class="title">Join Our Newsletter!!</h3>
+		<hr>
+
+		<form>
+			<input type="email" placeholder="Email">
+			<a href="#" class="btn">Subscribe now</a>
+		</form>
+	</section>
+
+	<footer>
+		<ul>
+			<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+			<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+			<li><a href="#"><i class="fa fa-snapchat-square"></i></a></li>
+			<li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+			<li><a href="#"><i class="fa fa-github-square"></i></a></li>
+		</ul>
+		<p>Made by ASE GROUP-7</p>
+	</footer> -->
+
+    </body>
+</html>

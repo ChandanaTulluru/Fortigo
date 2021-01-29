@@ -1,0 +1,163 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <meta charset ="utf-8">
+    <meta name ="viewport" content="width=device-width, intial-scale=1">
+    <title>fortiGO-The Truck App</title>
+
+    <!-- for source and destination-->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <!--<link rel="stylesheet" href="/resources/demos/style.css">-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+
+	  <link rel="stylesheet" typed="text/css" href="{% static 'Truck/base.css' %}">
+	  <link rel="stylesheet" typed="text/css" href="{% static 'Truck/base1.css' %}">
+     <!--<style><% include ./styles.css %>-->
+    <style>
+	.Hero{
+    position: relative;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    color: white;
+}
+    </style>
+    
+    <script>
+  $( function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  } );
+  </script>    
+
+    </head>
+    <body>
+        <header style="background:skyblue">
+            <h2 href="#">fortiGO</h2>
+            <nav>
+                <li><a href="#">LogOut</a> </li>
+		<li><a href="#">FAQ</a> </li>
+                <li><a href="#">Contact</a> </li>
+            </nav>
+            </header>
+	
+           <section class="Hero">
+	
+                <div class="hero-content-area">
+		<h3>Please fill out the following details!!</h3>
+                
+		
+
+		<div class="form-style-5">
+<form action="UserBookings/" method="post">
+{% csrf_token %}
+<fieldset>
+<legend><span class="number"></span> Customer Info</legend>
+<input type="text" name="field1" placeholder="Your Name *" required>
+<input type="email" name="field2" placeholder="Your Email *" required>
+
+<!--<input id = "tags"  name="field10" placeholder="naba" required>-->
+
+<div class="ui-widget">
+  <input type="text" id="tags" name="field4" placeholder="Source *" required>
+</div>
+
+
+<div class="ui-widget">
+  <label for="TTags">Destination: </label>
+  <input type="text" id="tags" name="field5" placeholder="Destination *" required>
+</div>
+
+
+
+<!--<label for="job">Source:</label>
+<select id="job" name="field4">
+  <option value="HYDERABAD">Hyderabad</option>
+  <option value="NELLORE">Nellore</option>
+  <option value="ANANTAPUR">ANANTAPUR</option>
+  <option value="CHENNAI">Chennai</option>
+
+</select>
+
+<label for="job1">Destination:</label>
+<select id="job1" name="field5">
+  <option value="CHENNAI">Chennai</option>
+  <option value="NELLORE">Nellore</option>
+  <option value="ANANTAPUR">ANANTAPUR</option>
+  <option value="HYDERABAD">Hyderabad</option>
+</select>-->
+  
+<label for="job2">Load: (in Kgs)</label>
+<select id="job2" name="field6">
+  <option value="100">100</option>
+  <option value="200">200</option>
+  <option value="300">300</option>
+  <option value="400">400</option>
+
+</select>
+
+</fieldset>
+
+<input type="submit" value="Show Routes" />
+</form>
+</div>
+
+                </div>
+
+            </section>
+
+        <!-- <section class="contact">
+		<h3 class="title">Join Our Newsletter!!</h3>
+		<hr>
+
+		<form>
+			<input type="email" placeholder="Email">
+			<a href="#" class="btn">Subscribe now</a>
+		</form>
+	</section>
+
+	<footer>
+		<ul>
+			<li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+			<li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+			<li><a href="#"><i class="fa fa-snapchat-square"></i></a></li>
+			<li><a href="#"><i class="fa fa-pinterest-square"></i></a></li>
+			<li><a href="#"><i class="fa fa-github-square"></i></a></li>
+		</ul>
+		<p>Made by ASE GROUP-7</p>
+	</footer> -->
+
+    </body>
+</html>

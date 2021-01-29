@@ -1,0 +1,180 @@
+{% load static %}
+{% load crispy_forms_tags %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+<body>
+
+<h3 style="text-align:center">Make your payment!!</h3>
+
+<center>
+<div style="width:75%">
+  <form method="POST">
+	{% csrf_token %}
+    <label for="Customer_name">Name:&nbsp&nbsp&nbsp</label>
+    {% for post in posts %}
+	{{ post.name }}
+    {% endfor %}
+    <br><br>
+
+    <label for="Customer_mobile">Contact:&nbsp&nbsp&nbsp</label>
+    {% for post in posts %}
+	{{ post.number }}
+    {% endfor %}
+    <br><br>
+    
+	<label for="Source"></label>
+    {% for post in posts %}
+	{{ post.source }}
+    {% endfor %}&nbsp&nbsp<strong>To</strong>&nbsp&nbsp
+
+	<label for="Destination"></label>
+    {% for post in posts %}
+	{{ post.destination }}
+    {% endfor %}
+	<br><br>
+
+    <label for="Amount">Amount:&nbsp&nbsp&nbsp&nbsp</label>
+    {% for post in posts %}
+	{{ post.price }}
+    {% endfor %}Rupees
+    <br><br>
+
+	<label for="Date">Date of shipping:&nbsp&nbsp&nbsp&nbsp</label>
+    {% for post in posts %}
+	{{ post.date }}
+    {% endfor %}
+    <br><br>
+
+
+    <p>Would you like to make the transaction online or by cash?*</p>
+
+    <input type="checkbox" id="mycheck"  onclick="myfunction()">Pay online<br>
+    &nbsp&nbsp<input type="checkbox" id="myCheck"  onclick="myFunction()">Pay by cash<br><br>
+
+	<div class="wrap-input100 validate-input m-b-16" data-validate="Please enter email">
+    {{ form_2.email|attr:"placeholder:email"|add_class:"input100" }}
+    <span class="focus-input100"></span>
+	</div>
+   
+
+   <div id="Text" style="display:none">
+	<label for="Credit_card">Credit Card*</label>
+        <input type="text" id="Credit_Card" name="Credit_Card" required><br><br>
+
+	&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<label for="CVC">CVC*</label>
+        <input type="text" id="CVC" name="CVC" required><br><br>
+
+	<label for="Expiry_date">Expiration Date*</label>
+    <select id="Month" name="Month">
+      <option value="January">January</option>
+      <option value="February">February</option>
+      <option value="March">March</option>
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>
+      <option value="August">August</option>
+      <option value="September">September</option>
+      <option value="October">October</option>
+      <option value="November">November</option>
+      <option value="December">December</option>
+    </select>
+  
+    <select id="Year" name="Year">
+      <option value="2018">2018</option>
+      <option value="2019">2019</option>
+      <option value="2020">2020</option>
+      <option value="2021">2021</option>
+      <option value="2022">2022</option>
+      <option value="2023">2023</option>
+      <option value="2024">2024</option>
+      <option value="2025">2025</option>
+      <option value="2026">2026</option>
+      <option value="2027">2027</option>
+      <option value="2028">2028</option>
+      <option value="2000">greater than 2028</option>
+    </select><br>
+    	
+    </div>
+
+
+    <div id="text" style="display:none">
+	
+<p>
+The payment is to be made within 24 hours of the bill generation. The office hours are listed below.</p> <br><br><br><br>
+
+Monday - Friday: 9AM - 2PM<br><br>
+
+Saturday: 9AM - 12PM<br><br>
+
+Sunday: Closed<br><br>
+
+    </div>
+
+    <input type="submit" value="CheckOut">
+  </form>
+</div>
+</center>
+
+<script>
+function myFunction() {
+    var checkBox = document.getElementById("myCheck");
+    var text = document.getElementById("text");
+    if (checkBox.checked == true){
+        text.style.display = "block";
+    } else {
+       text.style.display = "none";
+    }
+}
+</script>
+
+<script>
+function myfunction() {
+    var checkBox = document.getElementById("mycheck");
+    var text = document.getElementById("Text");
+    if (checkBox.checked == true){
+        text.style.display = "block";
+    } else {
+       text.style.display = "none";
+    }
+}
+</script>
+
+
+</body>
+</html>
+

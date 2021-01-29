@@ -1,0 +1,700 @@
+{% load static %}
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--=== Favicon ===-->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <title>fortiGO-Faq</title>
+
+    <link href="{% static 'Truck/bootstrap.min.css' %}" rel="stylesheet">
+    <!--=== Slicknav CSS ===-->
+    <link href="{% static 'Truck/slicknav.min.css' %}" rel="stylesheet">
+    <!--=== Magnific Popup CSS ===-->
+    <link href="{% static 'Truck/magnific-popup.css' %}" rel="stylesheet">
+    <!--=== Owl Carousel CSS ===-->
+    <link href="{% static 'Truck/owl.carousel.min.css' %}" rel="stylesheet">
+    <!--=== Gijgo CSS ===-->
+    <link href="{% static 'Truck/gijgo.css' %}" rel="stylesheet">
+    <!--=== FontAwesome CSS ===-->
+    <link href="{% static 'Truck/font-awesome.css' %}" rel="stylesheet">
+    <!--=== Theme Reset CSS ===-->
+    <link href="{% static 'Truck/reset.css' %}" rel="stylesheet">
+    <!--=== Main Style CSS ===-->
+    <link href="{% static 'Truck/style.css' %}" rel="stylesheet">
+    <!--=== Responsive CSS ===-->
+    <link href="{% static 'Truck/responsive.css' %}" rel="stylesheet">
+
+
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="loader-active">
+
+    <!--== Preloader Area Start ==-->
+    <div class="preloader">
+        <div class="preloader-spinner">
+            <div class="loader-content">
+                <img src="{% static 'Truck/preloader.gif' %}" alt="JSOFT">
+            </div>
+        </div>
+    </div>
+    <!--== Preloader Area End ==-->
+
+    <!--== Header Area Start ==-->
+    <header id="header-area" class="fixed-top">
+        <!--== Header Top Start ==-->
+        <div id="header-top" class="d-none d-xl-block">
+            <div class="container">
+                <div class="row">
+                    <!--== Single HeaderTop Start ==-->
+                    <div class="col-lg-3 text-left">
+                        <i class="fa fa-map-marker"></i>IIIT SriCity,Chittoor
+                    </div>
+                    <!--== Single HeaderTop End ==-->
+
+                    <!--== Single HeaderTop Start ==-->
+                    <div class="col-lg-3 text-center">
+                        <i class="fa fa-mobile"></i> 040-23473723
+                    </div>
+                    <!--== Single HeaderTop End ==-->
+
+                    <!--== Single HeaderTop Start ==-->
+                    <div class="col-lg-3 text-center">
+                        <i class="fa fa-clock-o"></i> Mon-Fri 09.00 - 17.00
+                    </div>
+                    <!--== Single HeaderTop End ==-->
+
+                    <!--== Social Icons Start ==-->
+                    <div class="col-lg-3 text-right">
+                        <div class="header-social-icons">
+                            <!---<a href="#"><i class="fa fa-behance"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>--->
+                        </div>
+                    </div>
+                    <!--== Social Icons End ==-->
+                </div>
+            </div>
+        </div>
+        <!--== Header Top End ==-->
+
+        <!--== Header Bottom Start ==-->
+        <div id="header-bottom">
+            <div class="container">
+                <div class="row">
+                    <!--== Logo Start ==-->
+                    <div class="col-lg-4">
+                        <a href="{% url 'Truck-register' %}" class="logo">
+                            <h2 style= "color:white"><strong>fortiGO</strong></h2>
+                        </a>
+                    </div>
+                    <!--== Logo End ==-->
+
+                    <!--== Main Menu Start ==-->
+                    <div class="col-lg-8 d-none d-xl-block">
+                        <nav class="mainmenu alignright">
+                            <ul>
+                                <li class="active"><a href="{% url 'Truck-register' %}">Home</a></li>
+                                <!--<li><a href="#A">About</a></li>
+                                <li><a href="#B">services</a></li>-->
+                                <!--<li><a href="#">Cars</a>
+                                    <ul>
+                                        <li><a href="car-left-sidebar.html">Car Left Sidebar</a></li>
+                                        <li><a href="car-right-sidebar.html">Car Right Sidebar</a></li>
+                                        <li><a href="car-without-sidebar.html">Car Without Sidebar</a></li>
+                                        <li><a href="car-details.html">Car Details</a></li>
+                                    </ul>
+                                </li>-->
+                                <!--<li><a href="index.html">Pages</a>
+                                    <ul>
+                                        <li><a href="package.html">Pricing</a></li>
+                                        <li><a href="driver.html">Driver</a></li>
+                                        <li><a href="faq.html">FAQ</a></li>
+                                        <li><a href="gallery.html">Gallery</a></li>
+                                        <li><a href="help-desk.html">Help Desk</a></li>
+                                        <li><a href="login.html">Log In</a></li>
+                                        <li><a href="register.html">Register</a></li>
+                                        <li><a href="404.html">404</a></li>
+                                    </ul>
+                                </li>-->
+                                <!--<li><a href="#">FAQ</a>-->
+                                    <!--<ul>
+                                        <li><a href="article.html">Blog Page</a></li>
+                                        <li><a href="article-details.html">Blog Details</a></li>
+                                    </ul>-->
+                                </li>
+                                <li><a href = {% url 'login' %}> Login </a></li>
+                                <li><a href="#C">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <!--== Main Menu End ==-->
+                </div>
+            </div>
+        </div>
+        <!--== Header Bottom End ==-->
+    </header>
+    <!--== Header Area End ==-->
+
+    <!--== Page Title Area Start ==-->
+    <section id="page-title-area" class="section-padding overlay">
+        <div class="container">
+            <div class="row">
+                <!-- Page Title Start -->
+                <div class="col-lg-12">
+                    <div class="section-title  text-center">
+                        <h2>FAQ's</h2>
+                        <span class="title-line"><i class="fa fa-car"></i></span>
+                        <p>Fequently Asked Questions</p>
+                    </div>
+                </div>
+                <!-- Page Title End -->
+            </div>
+        </div>
+    </section>
+    <!--== Page Title Area End ==-->
+
+    <!--== FAQ Area Start ==-->
+    <section id="faq-page-area" class="section-padding">
+        <div class="container">
+            <div class="row">
+                <!-- FAQ Content Start -->
+                <div class="col-lg-12">
+                    <div class="faq-details-content">
+                        <!-- Single FAQ Subject  Start -->
+                        <div class="single-faq-sub">
+                            <h3>Account Settings</h3>
+                            <div class="single-faq-sub-content">
+                                <div id="Q1">
+                                    <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q1_h1">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q1_1" aria-expanded="false" aria-controls="Q1_1">
+                                                <span>How can I create an account?</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button></h5>
+                                        </div>
+
+                                        <div id="Q1_1" class="collapse" aria-labelledby="Q1_h1" data-parent="#Q1">
+                                            <div class="card-body">
+                                                Holding an account is free, click "SignUp" to create a new account.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+
+                                    <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q1_h2">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q1_2" aria-expanded="false" aria-controls="Q1_2">
+                                                <span>Updating Email Id?</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button></h5>
+                                        </div>
+                                        <div id="Q1_2" class="collapse" aria-labelledby="Q1_h2" data-parent="#Q1">
+                                            <div class="card-body">
+                                                We do not allow updation of email ID associated with your account due to technical reasons.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+
+                                    <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q1_h3">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q1_3" aria-expanded="false" aria-controls="Q1_3">
+                                                <span>How can I reset my password?</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button></h5>
+                                        </div>
+                                        <div id="Q1_3" class="collapse" aria-labelledby="Q1_h3" data-parent="#Q1">
+                                            <div class="card-body">
+                                                Locked yourself out of your account?No worries, we'll get it fixed in no time. Click "Sign In" and click Forgot Password? below the empty login form fields. Type the email address listed under your account in the form field, and press Reset My Password Within seconds, you should receive an email with instructions to reset your account. Follow the prompts in this email to reset your password.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+
+                                    <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q1_h4">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q1_4" aria-expanded="false" aria-controls="Q1_4">
+                                                <span>Subscription and notification settings.</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button></h5>
+                                        </div>
+                                        <div id="Q1_4" class="collapse" aria-labelledby="Q1_h4" data-parent="#Q1">
+                                            <div class="card-body">
+                                                Changing your subscription and notification settings lets you control how often you hear about your travel and offers. You can turn them completely off/on, or pick which notifications to receive. We're still enhancing this feature!
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single FAQ Subject End -->
+
+                        <!-- Single FAQ Subject  Start -->
+                        <div class="single-faq-sub">
+                            <h3>Payments & Refund</h3>
+                            <div class="single-faq-sub-content">
+                                <div id="Q2">
+                                    <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q2_h1">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q2_1" aria-expanded="false" aria-controls="Q2_1">
+                                                <span>Where can I check my refund status?</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button></h5>
+                                        </div>
+
+                                        <div id="Q2_1" class="collapse" aria-labelledby="Q2_h1" data-parent="#Q2">
+                                            <div class="card-body">
+                                                You can check the status of your refund in 'My Trips' section and select the booking, click on "manage booking" to get to the "Refund Details" section.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+
+                                    <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q2_h2">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q2_2" aria-expanded="false" aria-controls="Q2_2">
+                                                <span>Can I make offline payments?</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button></h5>
+                                        </div>
+                                        <div id="Q2_2" class="collapse" aria-labelledby="Q2_h2" data-parent="#Q2">
+                                            <div class="card-body">
+                                                Yes you can make your payments offline.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+
+                                    <!-- Single FAQ End -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q2_h3">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q2_3" aria-expanded="false" aria-controls="Q2_3">
+                                                <span>What's the Card Verification Number (CVV) on my credit card?</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button></h5>
+                                        </div>
+                                        <div id="Q2_3" class="collapse" aria-labelledby="Q2_h3" data-parent="#Q2">
+                                            <div class="card-body">
+                                                CVV is an important security feature that reduces the risk of online fraud. This number never appears on sales receipts or billing statements and it is only found on the physical card itself. We ask you to enter the CVV code during your transaction to make sure that the card is, in fact, in your possession.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+
+                                    <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q2_h4">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q2_4" aria-expanded="false" aria-controls="Q2_4">
+                                                <span>Can I use my card to make a booking in someone else's name?</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button></h5>
+                                        </div>
+                                        <div id="Q2_4" class="collapse" aria-labelledby="Q2_h4" data-parent="#Q2">
+                                            <div class="card-body">
+                                                Yes, you can, but do make sure that under 'Traveller Name' you mention the name of the person who will be traveling. You are required to enter your name and your billing address while on the Payment Page.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+
+                                    <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q2_h5">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q2_5" aria-expanded="false" aria-controls="Q2_5">
+                                                <span>Can I make part payments?</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button></h5>
+                                        </div>
+                                        <div id="Q2_5" class="collapse" aria-labelledby="Q2_h5" data-parent="#Q2">
+                                            <div class="card-body">
+                                                No, we currently do nat support this facility.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+
+                                    <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q2_h6">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q2_6" aria-expanded="false" aria-controls="Q2_6">
+                                                <span>Card payment declined.</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button></h5>
+                                        </div>
+                                        <div id="Q2_6" class="collapse" aria-labelledby="Q2_h6" data-parent="#Q2">
+                                            <div class="card-body">
+                                                Please check with your bank if you have sufficient balance in your card and if your card is currently invalidity. OR try with a different card / bank account again.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+
+                                    <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q2_h7">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q2_7" aria-expanded="false" aria-controls="Q2_7">
+                                                <span>What are the different payment options offered by fortiGO.</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button></h5>
+                                        </div>
+                                        <div id="Q2_7" class="collapse" aria-labelledby="Q2_h7" data-parent="#Q2">
+                                            <div class="card-body">
+                                                You can make your booking using any of the following payment options - Credit / Debit Card, net banking.We now also accept offline payments.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+
+                                    <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q2_h8">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q2_8" aria-expanded="false" aria-controls="Q2_8">
+                                                <span>Is my payment secured on fortiGO.</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button></h5>
+                                        </div>
+                                        <div id="Q2_8" class="collapse" aria-labelledby="Q2_h8" data-parent="#Q2">
+                                            <div class="card-body">
+                                                Yes.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+                                    <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q2_h9">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q2_9" aria-expanded="false" aria-controls="Q2_9">
+                                                <span>While I was paying by net banking, my session expired. Why so?</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button></h5>
+                                        </div>
+                                        <div id="Q2_9" class="collapse" aria-labelledby="Q2_h9" data-parent="#Q2">
+                                            <div class="card-body">
+                                                Your session expired due to security reasons. This happens when you take too long to make the direct debit payment and done manage it in the specified amount of time. Please go back to the booking page and start over.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+
+                                    <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q2_h10">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q2_10" aria-expanded="false" aria-controls="Q2_10">
+                                                <span>By when can I receive my refund in my account after cancellation of my booking?</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button></h5>
+                                        </div>
+                                        <div id="Q2_10" class="collapse" aria-labelledby="Q2_h10" data-parent="#Q2">
+                                            <div class="card-body">
+                                                All refunds are processed by the method of payment used in the initial transaction. Once you have cancelled your booking, the refund is processed by FortiGO within max 6 business days. An e-mail confirmation of the refund amount will be sent to the email address given to us at the time of booking. However, for the amount to reflect in your bank or credit card account is dependent on the time taken by your bank thereon. For any discrepancies and delays, kindly check directly with your bank or credit card company. Where the User has cancelled his/her booking directly with the airlines, he/she will need to inform Goibibo with valid documentation to initiate the refund process. It is advisable to contact FortiGO within 48 hours of the cancellation request. Any later would require the User to send a scanned copy of your E-Ticket to FotiGO.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+
+                                     <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q2_h11">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q2_11" aria-expanded="false" aria-controls="Q2_11">
+                                                <span> My money has been deducted, and I have not received any confirmation mail or booking ID from your side. What should I do?</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button></h5>
+                                        </div>
+                                        <div id="Q2_11" class="collapse" aria-labelledby="Q2_h11" data-parent="#Q2">
+                                            <div class="card-body">
+                                                Such cases though rare usually happen and are usually the result of a slow internet connection.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+
+                                     <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q2_h12">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q2_12" aria-expanded="false" aria-controls="Q2_12">
+                                                <span>Can I pay with two different credit cards?</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button></h5>
+                                        </div>
+                                        <div id="Q2_12" class="collapse" aria-labelledby="Q2_h12" data-parent="#Q2">
+                                            <div class="card-body">
+                                                Online: Unfortunately we only accept 1 credit card as payment per bookings. Offline: Yes you can make the payment using 2 credit cards.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single FAQ Subject End -->
+
+                        <!-- Single FAQ Subject  Start -->
+                        <div class="single-faq-sub">
+                            <h3>General Enquiry</h3>
+                            <div class="single-faq-sub-content">
+                                <div id="Q3">
+                                    <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q3_h1">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q3_1" aria-expanded="false" aria-controls="Q3_1">
+                                                <span>What if I forget my Login/Password?</span>
+                                                <i class="fa fa-angle-down"></i>
+                                                <i class="fa fa-angle-up"></i>
+                                            </button></h5>
+                                        </div>
+
+                                        <div id="Q3_1" class="collapse" aria-labelledby="Q3_h1" data-parent="#Q3">
+                                            <div class="card-body">
+                                                While logging in,you can use the 'Forgot Password' link to generate a new password.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+
+                                    <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q3_h2">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q3_2" aria-expanded="false" aria-controls="Q3_2">
+                                                <span>What are transaction charges?</span>
+                                                <i class="fa fa-angle-up"></i>
+                                                <i class="fa fa-angle-down"></i>
+
+                                            </button></h5>
+                                        </div>
+
+                                        <div id="Q3_2" class="collapse" aria-labelledby="Q3_h2" data-parent="#Q3">
+                                            <div class="card-body">
+                                                These charges are levied by the bank directly as payment gateway charges to facilitate online payments. Such charges are applicable on all online payments on all sites.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+
+                                    <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q3_h3">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q3_3" aria-expanded="false" aria-controls="Q3_3">
+                                                <span>What is a Travel Insurance and can you book this with FortiGO?</span>
+                                                <i class="fa fa-angle-up"></i>
+                                                <i class="fa fa-angle-down"></i>
+
+                                            </button></h5>
+                                        </div>
+
+                                        <div id="Q3_3" class="collapse" aria-labelledby="Q3_h3" data-parent="#Q3">
+                                            <div class="card-body">
+                                                Travel Insurance is designed to pay for certain unexpected costs that may arise when you are travelling, such as emergency hospital/medical costs, trip cancellation, lost baggage and accidental death insurance. Yes, we do issue travel insurance while creating a fresh booking.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+
+                                    <!-- Single FAQ Start -->
+                                    <div class="card">
+                                        <div class="card-header" id="Q3_h4">
+                                            <h5 class="mb-0"><button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Q3_4" aria-expanded="false" aria-controls="Q3_4">
+                                                <span>Do I need to register with FortiGO before I make a booking?</span>
+                                                <i class="fa fa-angle-up"></i>
+                                                <i class="fa fa-angle-down"></i>
+
+                                            </button></h5>
+                                        </div>
+
+                                        <div id="Q3_4" class="collapse" aria-labelledby="Q3_h4" data-parent="#Q3">
+                                            <div class="card-body">
+                                                Yes.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Single FAQ End -->
+
+                               </div>
+                            </div>
+                        </div>
+                        <!-- Single FAQ Subject End -->
+
+                    </div>
+                </div>
+                <!-- FAQ Content End -->
+
+
+            </div>
+        </div>
+
+    </section>
+    <!--== FAQ Area End ==-->
+
+
+    <!--== Footer Area Start ==-->
+<div id = "C">
+    <section id="footer-area">
+
+        <div class="footer-widget-area">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-footer-widget">
+                            <h2>About Us</h2>
+                            <div class="widget-body">
+                                <!--<img src="assets/img/logo.png" alt="JSOFT">-->
+                                <p>Lorem ipsum dolored is a sit ameted consectetur adipisicing elit. Nobis magni assumenda distinctio debitis, eum fuga fugiat error reiciendis.</p>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                  <!--  <div class="col-lg-4 col-md-6">
+                        <div class="single-footer-widget">
+                            <h2>Recent Posts</h2>
+                            <div class="widget-body">
+                                <ul class="recent-post">
+                                    <li>
+                                        <a href="#">
+                                           Hello Bangladesh!
+                                           <i class="fa fa-long-arrow-right"></i>
+                                       </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                          Lorem ipsum dolor sit amet
+                                           <i class="fa fa-long-arrow-right"></i>
+                                       </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                           Hello Bangladesh!
+                                           <i class="fa fa-long-arrow-right"></i>
+                                       </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            consectetur adipisicing elit?
+                                           <i class="fa fa-long-arrow-right"></i>
+                                       </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>-->
+                    <!-- Single Footer Widget End -->
+
+                    <!-- Single Footer Widget Start -->
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="single-footer-widget">
+                            <h2>get touch</h2>
+                            <div class="widget-body">
+                                <p>Lorem ipsum doloer sited amet, consectetur adipisicing elit. nibh auguea, scelerisque sed</p>
+
+                                <ul class="get-touch">
+                                    <li><i class="fa fa-map-marker"></i> IIIT SriCity</li>
+                                    <li><i class="fa fa-mobile"></i> 040-23473723</li>
+                                    <li><i class="fa fa-envelope"></i> www.iiits.ac.in</li>
+                                </ul>
+                                <a href="https://www.google.com/maps/@13.5576636,80.0255463,15z" class="map-show" target="_blank">Show Location</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Footer Widget End -->
+                </div>
+            </div>
+        </div>
+        <!-- Footer Widget End -->
+
+        <!-- Footer Bottom Start -->
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer Bottom End -->
+    </section>
+  </div>
+    <!--== Footer Area End ==-->
+
+    <!--== Scroll Top Area Start ==-->
+    <div class="scroll-top">
+        <!--<img src="assets/img/scroll-top.png" alt="FortiGO">-->
+        <i class = "fa fa-truck" style = "color:yellow"></i>
+    </div>
+    <!--== Scroll Top Area End ==-->
+
+    <!--=======================Javascript============================-->
+    <!--=== Jquery Min Js ===-->
+    <script src="{% static 'Truck/jquery-3.2.1.min.js' %}"></script>
+    <!--=== Jquery Migrate Min Js ===-->
+    <script src="{% static 'Truck/jquery-migrate.min.js' %}"></script>
+    <!--=== Popper Min Js ===-->
+    <script src="{% static 'Truck/popper.min.js' %}"></script>
+    <!--=== Bootstrap Min Js ===-->
+    <script src="{% static 'Truck/bootstrap.min.js' %}"></script>
+    <!--=== Gijgo Min Js ===-->
+    <script src="{% static 'Truck/gijgo.js' %}"></script>
+    <!--=== Vegas Min Js ===-->
+    <script src="{% static 'Truck/vegas.min.js' %}"></script>
+    <!--=== Isotope Min Js ===-->
+    <script src="{% static 'Truck/isotope.min.js' %}"></script>
+    <!--=== Owl Caousel Min Js ===-->
+    <script src="{% static 'Truck/owl.carousel.min.js' %}"></script>
+    <!--=== Waypoint Min Js ===-->
+    <script src="{% static 'Truck/waypoints.min.js' %}"></script>
+    <!--=== CounTotop Min Js ===-->
+    <script src="{% static 'Truck/counterup.min.js' %}"></script>
+    <!--=== YtPlayer Min Js ===-->
+    <script src="{% static 'Truck/mb.YTPlayer.js' %}"></script>
+    <!--=== Magnific Popup Min Js ===-->
+    <script src="{% static 'Truck/magnific-popup.min.js' %}"></script>
+    <!--=== Slicknav Min Js ===-->
+    <script src="{% static 'Truck/slicknav.min.js' %}"></script>
+
+    <!--=== Mian Js ===-->
+    <script src="{% static 'Truck/main.js' %}"></script>
+
+</body>
+
+</html>
